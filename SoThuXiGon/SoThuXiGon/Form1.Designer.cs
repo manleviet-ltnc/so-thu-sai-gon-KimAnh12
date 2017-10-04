@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lstThuMoi = new System.Windows.Forms.ListBox();
             this.lstDanhSach = new System.Windows.Forms.ListBox();
-            this.bntChon = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(234, 8);
+            this.label2.Location = new System.Drawing.Point(171, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 1;
@@ -57,17 +59,11 @@
             // 
             this.lstThuMoi.AllowDrop = true;
             this.lstThuMoi.FormattingEnabled = true;
-            this.lstThuMoi.Items.AddRange(new object[] {
-            "Chó",
-            "Mèo",
-            "Khỉ",
-            "Sư tử",
-            "Báo",
-            "Trăn"});
             this.lstThuMoi.Location = new System.Drawing.Point(15, 26);
             this.lstThuMoi.Name = "lstThuMoi";
             this.lstThuMoi.Size = new System.Drawing.Size(135, 147);
             this.lstThuMoi.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.lstThuMoi, "Ấn chuột và kéo sang Danh sách thú để tạo Sở thú ");
             this.lstThuMoi.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
             this.lstThuMoi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LisBox_MouseDown);
             // 
@@ -75,7 +71,7 @@
             // 
             this.lstDanhSach.AllowDrop = true;
             this.lstDanhSach.FormattingEnabled = true;
-            this.lstDanhSach.Location = new System.Drawing.Point(237, 26);
+            this.lstDanhSach.Location = new System.Drawing.Point(174, 26);
             this.lstDanhSach.Name = "lstDanhSach";
             this.lstDanhSach.Size = new System.Drawing.Size(135, 147);
             this.lstDanhSach.TabIndex = 3;
@@ -83,22 +79,23 @@
             this.lstDanhSach.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
             this.lstDanhSach.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LisBox_MouseDown);
             // 
-            // bntChon
+            // btnSave
             // 
-            this.bntChon.Location = new System.Drawing.Point(156, 66);
-            this.bntChon.Name = "bntChon";
-            this.bntChon.Size = new System.Drawing.Size(75, 23);
-            this.bntChon.TabIndex = 4;
-            this.bntChon.Text = "Chọn";
-            this.bntChon.UseVisualStyleBackColor = true;
-            this.bntChon.Click += new System.EventHandler(this.bntChon_Click);
+            this.btnSave.Location = new System.Drawing.Point(212, 179);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(97, 23);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Lưu danh sách";
+            this.toolTip1.SetToolTip(this.btnSave, "Lưu danh sách con thú vào file danhsachthu.txt");
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.Save);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 261);
-            this.Controls.Add(this.bntChon);
+            this.ClientSize = new System.Drawing.Size(329, 238);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lstDanhSach);
             this.Controls.Add(this.lstThuMoi);
             this.Controls.Add(this.label2);
@@ -108,6 +105,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "So Thu Xi Gon";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,7 +117,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstThuMoi;
         private System.Windows.Forms.ListBox lstDanhSach;
-        private System.Windows.Forms.Button bntChon;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 
