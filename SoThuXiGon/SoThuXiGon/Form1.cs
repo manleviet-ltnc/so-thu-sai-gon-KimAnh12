@@ -38,14 +38,22 @@ namespace SoThuXiGon
                 e.Effect = DragDropEffects.Move;
         }
 
+        bool isItemChanged = false;
         private void lstDanhSach_DragDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
             {
-                ListBox lb = (ListBox)sender;
-                lb.Items.Add(e.Data.GetData(DataFormats.Text));
+                if (!lstDanhSach.Items.Contains(lstThuMoi.SelectedItem))
+                {
+                    ListBox lb = (ListBox)sender;
+                    lb.Items.Add(e.Data.GetData(DataFormats.Text));
+                }
             }
+
+            isItemChanged = true;
         }
+
+        bool isSaved = true;
         private void Save(object sender, EventArgs e)
         {
             // Mở tập tin
@@ -55,6 +63,8 @@ namespace SoThuXiGon
             foreach (var item in lstDanhSach.Items)
                 writer.WriteLine(item.ToString());
             writer.Close();
+
+            isSaved = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -119,6 +129,32 @@ namespace SoThuXiGon
         private void Form1_Load_1(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lstDanhSach.SelectedIndex != -1)
+                lstDanhSach.Items.RemoveAt(lstDanhSach.SelectedIndex);
+
+            isItemChanged = true;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isItemChanged == true)
+                if (isSaved)
+                {
+                    DialogResult result = MessageBox.Show("Bạn có muốn lưu danh sách?",
+                                                          "",
+                                                          MessageBoxButtons.YesNoCancel,
+                                                          MessageBoxIcon.None);
+                    if (result == DialogResult.Yes)
+                        Save(sender, e);
+                    else if (result == DialogResult.No)
+                        e.Cancel = false;
+                    else
+                        e.Cancel = true;
+                }
         }
     }
 }

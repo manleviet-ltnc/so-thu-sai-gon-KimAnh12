@@ -7,3 +7,13 @@ C:\Users\thuchanh\Source\Repos\so-thu-sai-gon-KimAnh122\SoThuXiGon\SoThuXiGon\ob
 C:\Users\thuchanh\Source\Repos\so-thu-sai-gon-KimAnh122\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.csproj.CoreCompileInputs.cache
 C:\Users\thuchanh\Source\Repos\so-thu-sai-gon-KimAnh122\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.exe
 C:\Users\thuchanh\Source\Repos\so-thu-sai-gon-KimAnh122\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.pdb
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\bin\Debug\SoThuXiGon.exe.config
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\bin\Debug\SoThuXiGon.exe
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\bin\Debug\SoThuXiGon.pdb
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.csprojResolveAssemblyReference.cache
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.Form1.resources
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.Properties.Resources.resources
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.csproj.GenerateResource.Cache
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.csproj.CoreCompileInputs.cache
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.exe
+C:\so-thu-sai-gon-KimAnh12\SoThuXiGon\SoThuXiGon\obj\Debug\SoThuXiGon.pdb
